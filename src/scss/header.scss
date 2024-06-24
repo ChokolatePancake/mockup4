@@ -1,5 +1,7 @@
 .header {
   position: fixed;
+  background-color: $white;
+  top: 0;
   box-shadow: 0 0 10px 5px $grey;
   width: 100%;
   padding: 10px 0;
@@ -8,7 +10,6 @@
   }
   &__logo-burger {
     display: flex;
-    width: 100%;
   }
   &__logo {
     img {
@@ -25,8 +26,7 @@
   &__links-button {
     display: flex;
     margin: auto 0 auto auto;
-    max-width: 720px;
-    width: 100%;
+    width: 710px;
     justify-content: space-between;
   }
 
@@ -81,6 +81,9 @@
   @include breakpoint(tablet) {
     >.container {
       display: block;
+    }
+    &__logo-burger {
+      width: 100%;
     }
     &__burger {
       display: block;
