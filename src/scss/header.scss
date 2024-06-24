@@ -1,14 +1,25 @@
 .header {
+  position: fixed;
   box-shadow: 0 0 10px 5px $grey;
+  width: 100%;
   padding: 10px 0;
   >.container {
     display: flex;
+  }
+  &__logo-burger {
+    display: flex;
+    width: 100%;
   }
   &__logo {
     img {
       max-width: 80px;
       height: auto;
     }
+  }
+
+  &__burger {
+    display: none;
+    cursor: pointer;
   }
 
   &__links-button {
@@ -52,6 +63,89 @@
     &__links {
       ol {
         max-width: 500px;
+      }
+    }
+  }
+
+  @include breakpoint(laptop) {
+    &__links-button {
+      max-width: 640px;
+    }
+    &__links {
+      ol {
+        max-width: 480px;
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    >.container {
+      display: block;
+    }
+    &__burger {
+      display: block;
+      margin: auto 0 auto auto;
+      background-color: $blue;
+      padding: 5px;
+      border-radius: 5px;
+      max-height: 38px;
+      max-width: 48px;
+      &-line {
+        transition: transform 0.75s ease, opacity 0.75 ease;
+        display: block;
+        width: 38px;
+        height: 2px;
+        background-color: $white;
+        margin: 6px 0;
+      }
+      &.open {
+          .header__burger-line1 {
+            transform: translate(-12px) rotate(33.5deg) translate(15px);
+          }
+        .header__burger-line2 {
+            opacity: 0;
+          }
+        .header__burger-line3 {
+            transform: translate(-12px) rotate(-33.5deg) translate(15px);
+          }
+        }
+      }
+    &__links-button {
+      display: none;
+      &.show {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        ol {
+          flex-direction: column;
+          text-align: center;
+          max-width: 560px;
+          li {
+            margin-top: 16px;
+            margin-bottom: 10px;
+          }
+        }
+        button {
+          margin: 10px auto;
+        }
+      }
+    }
+  }
+  @include breakpoint(phablet) {
+    &__links-button {
+      max-width: 440px;
+    }
+    &__links {
+      ol {
+        width: 440px;
+      }
+    }
+  }
+
+  @include breakpoint(largePhone) {
+    &__links {
+      ol {
+        width: 280px;
       }
     }
   }

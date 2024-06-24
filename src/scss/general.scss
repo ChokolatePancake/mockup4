@@ -10,4 +10,16 @@
   @include breakpoint(desktop) {
     max-width: 1000px;
   }
+
+  @include breakpoint(tablet) {
+    max-width: 590px;
+  }
+
+  @include breakpoint(phablet) {
+    max-width: 470px;
+  }
+
+  @include breakpoint(largePhone) {
+    max-width: 310px;
+  }
 }
