@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  z-index: 100;
   background-color: $white;
   top: 0;
   box-shadow: 0 0 10px 5px $grey;
@@ -38,7 +39,6 @@
       justify-content: space-between;
     }
     a {
-      color: $dark-grey;
       text-decoration: none;
       &:hover {
         color: $black;

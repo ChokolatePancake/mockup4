@@ -1,4 +1,7 @@
 .development {
   height: 570px;
   background-color: $white;
+  &__content {
+    display: flex;
+  }
 }
