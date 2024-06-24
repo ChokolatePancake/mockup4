@@ -8,7 +8,6 @@
   }
   &__logo-burger {
     display: flex;
-    width: 100%;
   }
   &__logo {
     img {
@@ -81,6 +80,9 @@
   @include breakpoint(tablet) {
     >.container {
       display: block;
+    }
+    &__logo-burger {
+      width: 100%;
     }
     &__burger {
       display: block;
