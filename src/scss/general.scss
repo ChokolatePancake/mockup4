@@ -36,3 +36,29 @@ body {
     max-width: 310px;
   }
 }
+
+.slick-dots {
+  button {
+    max-height: 15px;
+    max-width: 15px;
+    border-radius: 100%;
+    background-color: $grey !important;
+    text-indent: -9999px;
+    &:hover {
+      background-color: $dark-white !important;
+    }
+  }
+  li {
+    margin: 0 10px !important;
+  }
+  li.slick-active button {
+    background-color: $light-black !important;
+  }
+}
+
+.slick-track {
+  max-width: 1190px;
+  @include breakpoint(desktop) {
+    max-width: 970px;
+  }
+}
