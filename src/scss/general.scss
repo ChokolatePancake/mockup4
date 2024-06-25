@@ -24,6 +24,10 @@ body {
     max-width: 1000px;
   }
 
+  @include breakpoint(laptop) {
+    max-width: 766px;
+  }
+
   @include breakpoint(tablet) {
     max-width: 590px;
   }
@@ -53,12 +57,5 @@ body {
   }
   li.slick-active button {
     background-color: $light-black !important;
-  }
-}
-
-.slick-track {
-  max-width: 1190px;
-  @include breakpoint(desktop) {
-    max-width: 970px;
   }
 }

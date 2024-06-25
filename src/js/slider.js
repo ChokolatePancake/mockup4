@@ -2,7 +2,8 @@ $(document).ready(function(){
     $('.development__content').slick({
         slidesToShow: 3,
         arrows: false,
-
+        infinite: true,
+        autoplay: false,
         responsive: [
             {
                 breakpoint: 850,
@@ -14,7 +15,7 @@ $(document).ready(function(){
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 601,
                 settings: {
                     slidesToShow: 1,
                     dots: true,
