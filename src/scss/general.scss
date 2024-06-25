@@ -23,6 +23,10 @@ body {
     max-width: 1000px;
   }
 
+   @include breakpoint(laptop) {
+    max-width: 766px;
+  }
+
   @include breakpoint(tablet) {
     max-width: 590px;
   }
