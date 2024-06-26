@@ -5,19 +5,25 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link to main CSS file -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Link to Slick Carousel CSS -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Link to Slick Carousel theme CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-    <title>Document</title>
+    <title>Mockup4</title>
 </head>
 <body>
+<!-- Include header HTML file -->
 @@include('html/header.html')
+<!-- Main content container for content left block and registration block-->
 <div id="main" class="container ">
     <div class="top-block">
         @@include('html/content-left.html')
         @@include('html/registration.html')
     </div>
 </div>
+<!-- Include all blocks -->
 @@include('html/development.html')
 @@include('html/statistics.html')
 @@include('html/testimonials.html')
@@ -26,12 +32,19 @@
 @@include('html/map.html')
 @@include('html/cta.html')
 @@include('html/copyright.html')
+<!-- Include jQuery library -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<!-- Include jQuery migrate plugin -->
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- Include Slick Carousel JavaScript -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- Include JavaScript file for burger menu -->
 <script src="js/burger.js"></script>
+<!-- Include JavaScript file for phone validation -->
 <script src="js/phone.js"></script>
+<!-- Include JavaScript file for full form validation-->
 <script src="js/form-validation.js"></script>
+<!-- Include JavaScript files for sliders -->
 <script src="js/slider.js"></script>
 <script src="js/testimonials-slider.js"></script>
 <script src="js/mentors-slider.js"></script>

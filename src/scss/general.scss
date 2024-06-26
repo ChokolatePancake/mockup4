@@ -1,13 +1,16 @@
+/* Apply box-sizing and default text color to all elements */
 * {
   box-sizing: border-box;
-    color: $dark-grey;
+  color: $dark-grey;
 }
 
+/* Set body styles */
 body {
   padding-top: 103px;
   background-color: $light-grey;
 }
 
+/* Flex container for top block content */
 .top-block {
   display: flex;
   @include  breakpoint(tablet) {
@@ -15,11 +18,13 @@ body {
   }
 }
 
+/* Container class for responsive layout */
 .container {
   margin: 0 auto;
   max-width: 1220px;
   padding: 0 15px;
 
+  /* Responsive breakpoints */
   @include breakpoint(desktop) {
     max-width: 1000px;
   }
@@ -41,6 +46,7 @@ body {
   }
 }
 
+/* Styling for Slick carousel dots */
 .slick-dots {
   button {
     max-height: 15px;
