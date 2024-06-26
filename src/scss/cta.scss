@@ -1,46 +1,53 @@
 .cta {
-  background-color: $light-blue;
-  >.container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  &__block {
-    text-align: center;
-    padding: 40px;
-    h4{
-      color: $white;
-      margin: 10px 0;
-    }
+  background-color: $light-blue; // Set background color
 
+  // Container for CTA blocks
+  > .container {
+    display: flex; // Use flexbox layout
+    justify-content: space-between; // Distribute space between items
+    flex-wrap: wrap; // Allow wrapping of items
+  }
+
+  // Individual CTA block styles
+  &__block {
+    text-align: center; // Center-align content
+    padding: 40px; // Add padding around blocks
+    h4 {
+      color: $white; // Set heading color to white
+      margin: 10px 0; // Add vertical margin
+    }
     a {
-      color: $white;
-      text-decoration: none;
+      color: $white; // Set link color to white
+      text-decoration: none; // Remove underline from links
     }
     img {
-      max-width: 50px;
-      max-height: 50px;
+      max-width: 50px; // Limit image width
+      max-height: 50px; // Limit image height
     }
   }
 
+  // Laptop breakpoint styles for CTA
   @include breakpoint(laptop) {
     &__block {
-      padding: 40px 10px;
-    }
-  }
-  @include breakpoint(tablet) {
-    >.container {
-      display: grid;
-      grid-template-columns: auto auto;
+      padding: 40px 10px; // Adjust padding for smaller screens
     }
   }
 
+  // Tablet breakpoint styles for CTA
+  @include breakpoint(tablet) {
+    > .container {
+      display: grid; // Switch to grid layout
+      grid-template-columns: auto auto; // Create two-column layout
+    }
+  }
+
+  // Large phone breakpoint styles for CTA
   @include breakpoint(largePhone) {
     &__block {
-      padding: 40px 0;
+      padding: 40px 0; // Remove horizontal padding
       a {
-        font-size: 12px;
-        letter-spacing: -0.5px;
+        font-size: 12px; // Reduce font size for links
+        letter-spacing: -0.5px; // Adjust letter spacing for compact display
       }
     }
   }

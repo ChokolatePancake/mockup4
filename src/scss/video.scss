@@ -1,40 +1,40 @@
 .video {
-  padding-top: 80px;
-  padding-bottom: 60px;
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+  padding-top: 80px; // Add top padding
+  padding-bottom: 60px; // Add bottom padding
+  text-align: center; // Center align text
+  justify-content: center; // Center items
+  display: flex; // Use flexbox layout
+  flex-direction: column; // Arrange items in a column
   &__text {
-    font-weight: 300;
-    line-height: 24px;
-    margin: 24px 0;
-    max-width: 1100px;
+    font-weight: 300; // Set font weight
+    line-height: 24px; // Set line height
+    margin: 24px 0; // Add vertical margin
+    max-width: 1100px; // Set maximum width
   }
   &__title {
-    margin: 0;
-    font-weight: 500;
+    margin: 0; // Remove margin
+    font-weight: 500; // Set font weight
   }
   &__player {
     iframe {
-      width: 1020px;
-      height: auto;
-      aspect-ratio: 16 / 9;
+      width: 1020px; // Set iframe width
+      height: auto; // Set iframe height to auto
+      aspect-ratio: 16 / 9; // Set aspect ratio
     }
   }
 
   @include breakpoint(video) {
     &__player {
       iframe {
-        width: 100vw;
-        max-width: 100%;
+        width: 100vw; // Set iframe width to viewport width
+        max-width: 100%; // Ensure iframe does not exceed container
       }
     }
   }
 
   @include breakpoint(largePhone) {
     &__text {
-      margin: 24px -5px;
+      margin: 24px -5px; // Adjust margin for large phone
     }
   }
 }

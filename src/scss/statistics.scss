@@ -1,44 +1,44 @@
 .statistics {
-  background-color: $light-blue;
+  background-color: $light-blue; // Set background color to light blue
   h3 {
-    color:$white;
-    font-weight: 500;
-    font-size: 24px;
-    margin-bottom: 0;
-    margin-top: 15px;
+    color: $white; // Set text color to white
+    font-weight: 500; // Set font weight
+    font-size: 24px; // Set font size
+    margin-bottom: 0; // Remove bottom margin
+    margin-top: 15px; // Set top margin
   }
   p {
-    color:$white;
+    color: $white; // Set text color to white
   }
   >.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: flex; // Use flexbox layout
+    flex-wrap: wrap; // Allow wrapping
+    justify-content: space-between; // Space between items
   }
   &__block {
     img {
-      width: 70px;
+      width: 70px; // Set image width
     }
-    text-align: center;
-    padding: 80px 0 75px;
-    max-width: 295px;
-    width: 100%;
+    text-align: center; // Center align text
+    padding: 80px 0 75px; // Set padding
+    max-width: 295px; // Set maximum width
+    width: 100%; // Full width
   }
 
   @include breakpoint(desktop) {
     &__block {
-      max-width: 240px;
+      max-width: 240px; // Adjust max width for desktop
     }
   }
 
   @include breakpoint(laptop) {
     &__block {
-      max-width: 180px;
+      max-width: 180px; // Adjust max width for laptop
       h3 {
-        font-size: 22px;
+        font-size: 22px; // Adjust font size for laptop
       }
       p {
-        font-size: 14px;
+        font-size: 14px; // Adjust font size for laptop
       }
     }
   }
@@ -46,34 +46,34 @@
   @include breakpoint(tablet) {
     &__block {
       img {
-        width: 80px;
+        width: 80px; // Adjust image width for tablet
       }
-      max-width: 240px;
+      max-width: 240px; // Adjust max width for tablet
       p {
-        font-size: 16px;
+        font-size: 16px; // Adjust font size for tablet
       }
       h3 {
-        font-size: 26px;
+        font-size: 26px; // Adjust font size for tablet
       }
     }
   }
 
   @include breakpoint(phablet) {
     &__block {
-      max-width: 220px;
-      padding: 50px 0 45px;
+      max-width: 220px; // Adjust max width for phablet
+      padding: 50px 0 45px; // Adjust padding for phablet
     }
   }
 
   @include breakpoint(largePhone) {
     &__block {
       h3 {
-        font-size: 20px;
+        font-size: 20px; // Adjust font size for large phone
       }
-      max-width: 140px;
-      padding: 35px 0;
+      max-width: 140px; // Adjust max width for large phone
+      padding: 35px 0; // Adjust padding for large phone
       p {
-        font-size: 11px;
+        font-size: 11px; // Adjust font size for large phone
       }
     }
   }

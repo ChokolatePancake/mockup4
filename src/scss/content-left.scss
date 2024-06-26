@@ -1,71 +1,79 @@
 .content-left {
-  height: 720px;
-  align-content: center;
-  text-align: center;
-  width: 47.5%;
-  padding: 0 40px;
+  height: 720px; // Fixed height for the content to center text vertically
+  align-content: center; // Vertically center
+  text-align: center; // Horizontally center the text
+  width: 47.5%; // Set width less than half
+  padding: 0 40px; // Add horizontal padding
+
+  // Heading styles within content-left
   h2 {
-    font-weight: 600;
-    font-size: 30px;
+    font-weight: 600; // Semi-bold font weight
+    font-size: 30px; // Large font size for headings
   }
 
+  // Paragraph styles within content-left
   p {
-    padding: 0 20px;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 30px;
+    padding: 0 20px; // Add additional horizontal padding to paragraphs
+    font-size: 16px; // Base font size
+    font-weight: 300; // Light font weight
+    line-height: 30px; // Increase line height for readability
   }
 
+  // Desktop breakpoint styles
   @include breakpoint(desktop) {
     h2 {
-      font-size: 28px;
+      font-size: 28px; // Slightly heading size
     }
   }
 
+  // Laptop breakpoint styles
   @include breakpoint(laptop) {
-    height: 700px;
-    padding-left: 10px;
-    width: 55%;
+    height: 700px; // Reduce overall height
+    padding-left: 10px; // Reduce left padding
+    width: 55%; // Increase width
     h2 {
-      font-size: 26px;
+      font-size: 26px; // Further reduce heading size
     }
     p {
-      font-size: 14px;
-      padding: 0 15px;
+      font-size: 14px; // Reduce paragraph font size
+      padding: 0 15px; // Reduce paragraph padding
     }
   }
 
+  // Tablet breakpoint styles
   @include breakpoint(tablet) {
-    padding-top: 30px;
-    height: 500px;
-    width: 100%;
+    padding-top: 30px; // Add top padding
+    height: 500px; // Reduce height
+    width: 100%; // Full width on tablets
     h2 {
-      font-size: 32px;
+      font-size: 32px; // Increase heading size
     }
     p {
-      font-size: 20px;
+      font-size: 20px; // Increase paragraph font size
     }
   }
 
+  // Phablet breakpoint styles
   @include breakpoint(phablet) {
-    height: 490px;
-    padding: 14px 20px 0;
+    height: 490px; //Reduce height
+    padding: 14px 20px 0; // Adjust padding
     p {
-      font-size: 18px;
+      font-size: 18px; // Reduce paragraph font size
     }
   }
 
+  // Large phone breakpoint styles
   @include breakpoint(largePhone) {
-    height: 500px;
-    padding: 0;
+    height: 500px; // Adjust height again
+    padding: 0; // Remove padding
     h2 {
-      font-size: 22px;
+      font-size: 22px; // Reduce heading size for small screens
     }
     p {
-      padding: 0;
-      font-size: 12px;
-      letter-spacing: 0.8px;
-      line-height: 28px;
+      padding: 0; // Remove paragraph padding
+      font-size: 12px; // Reduce font size
+      letter-spacing: 0.8px; // Add letter spacing for readability
+      line-height: 28px; // Adjust line height
     }
   }
 }

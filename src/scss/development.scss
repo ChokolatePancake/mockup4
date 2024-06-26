@@ -1,7 +1,8 @@
 .development {
-  height: 570px;
+  height: 570px; // Fixed height for the section
   background-color: $white;
   text-align: center;
+
   h2 {
     font-weight: 500;
     font-size: 30px;
@@ -9,23 +10,26 @@
     padding-top: 50px;
     margin-bottom: 28px;
   }
+
   &__content {
-    display: flex;
-    margin: 0 -34px;
+    display: flex; // Use flexbox for layout
+    margin: 0 -34px; // Negative margin for alignment
   }
 
   &__block {
     max-width: 346px;
     text-align: center;
     margin: 0 34px;
+
     h4 {
       font-weight: 500;
       font-size: 20px;
     }
   }
+
   &__image {
     max-width: 85px;
-    margin: 0 auto;
+    margin: 0 auto; // Center the image
   }
 
   &__text {
@@ -33,49 +37,50 @@
     font-size: 16px;
     line-height: 24px;
     font-weight: 300;
-    border-top: 2px solid $blue;
+    border-top: 2px solid $blue; // Add top border
   }
 
+  // Responsive adjustments
   @include breakpoint(desktop) {
     &__content {
-      margin: 0 -13px;
+      margin: 0 -13px; // Adjust negative margin
     }
     &__block {
-      max-width: 300px;
+      max-width: 300px; // Reduce block width
       margin: 0 13px;
     }
   }
 
   @include breakpoint(laptop) {
     h4 {
-      font-size: 18px;
+      font-size: 18px; // Reduce heading size
     }
     &__block {
-      max-width: 230px;
+      max-width: 230px; // Further reduce block width
     }
     &__text {
-      font-size: 14px;
+      font-size: 14px; // Reduce text size
     }
   }
 
   @include breakpoint(slider) {
     margin: 0 -10.3px;
     h4 {
-      font-size: 20px;
+      font-size: 20px; // Increase heading size
     }
     &__block {
       margin: 0 10.3px 30px;
-      max-width: 360px;
+      max-width: 360px; // Increase block width
     }
     &__text {
-      font-size: 16px;
+      font-size: 16px; // Increase text size
     }
   }
 
   @include breakpoint(tablet) {
-    height: 600px;
+    height: 600px; // Increase section height
     &__block {
-      max-width: 272px;
+      max-width: 272px; // Adjust block width
     }
   }
 
@@ -83,24 +88,24 @@
     margin: 0 -23px;
     &__block {
       margin: 0 23px;
-      max-width: 420px;
+      max-width: 420px; // Increase block width
     }
     &__text {
       margin-bottom: 30px;
     }
   }
+
   @include breakpoint(largePhone) {
     h2 {
-      font-size: 24px;
+      font-size: 24px; // Reduce main heading size
     }
     h4 {
       margin-bottom: 10px;
     }
     &__text {
-      font-size: 14px;
+      font-size: 14px; // Reduce text size
       padding-top: 24px;
       margin-bottom: 50px;
     }
   }
 }
-
