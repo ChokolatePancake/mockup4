@@ -1,0 +1,47 @@
+.cta {
+  background-color: $light-blue;
+  >.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__block {
+    text-align: center;
+    padding: 40px;
+    h4{
+      color: $white;
+      margin: 10px 0;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+    img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+
+  @include breakpoint(laptop) {
+    &__block {
+      padding: 40px 10px;
+    }
+  }
+  @include breakpoint(tablet) {
+    >.container {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+  }
+
+  @include breakpoint(largePhone) {
+    &__block {
+      padding: 40px 0;
+      a {
+        font-size: 12px;
+        letter-spacing: -0.5px;
+      }
+    }
+  }
+}
