@@ -73,6 +73,7 @@
   }
 
   @include breakpoint(tablet) {
+    height: 600px;
     &__block {
       max-width: 272px;
     }
