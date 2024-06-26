@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         let result = '+(380)-';
-        for (let i = 3; i < value.length && i < 12; i++) {
+        for (let i = 3; i < value.length && i < 10; i++) {
             if (i === 6) result += '-';
             if (i === 8) result += '-';
             result += value[i];

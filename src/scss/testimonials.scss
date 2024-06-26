@@ -65,6 +65,7 @@
   }
 
   @include breakpoint(tablet) {
+    height: 480px;
     >.container {
       max-width: 560px;
     }
@@ -78,6 +79,7 @@
   }
 
   @include breakpoint(phablet) {
+    height: 560px;
     >.container {
       max-width: 430px;
     }
@@ -91,6 +93,7 @@
   }
 
   @include breakpoint(largePhone) {
+    height: 630px;
     >.container {
       max-width: 280px;
     }
