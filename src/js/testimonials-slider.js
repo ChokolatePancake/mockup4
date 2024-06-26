@@ -5,6 +5,7 @@ $(document).ready(function() {
         speed:500,
         fade: true,
         autoplaySpeed: 10000,
-        infinite:true
+        infinite:true,
+        dots: true
     });
 });
