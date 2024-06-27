@@ -1,5 +1,7 @@
 .header {
   position: fixed;
+  background-color: $white;
+  top: 0;
   box-shadow: 0 0 10px 5px $grey;
   width: 100%;
   padding: 10px 0;
@@ -24,8 +26,7 @@
   &__links-button {
     display: flex;
     margin: auto 0 auto auto;
-    max-width: 720px;
-    width: 100%;
+    width: 710px;
     justify-content: space-between;
   }
 
@@ -113,6 +114,7 @@
         }
       }
     &__links-button {
+      max-width: 550px;
       display: none;
       &.show {
         display: flex;
@@ -145,6 +147,15 @@
   }
 
   @include breakpoint(largePhone) {
+    &__links-button {
+      max-width: 280px;
+    }
+    &__links {
+      max-width: 280px;
+    }
+    &__button {
+      max-width: 280px;
+    }
     &__links {
       ol {
         width: 280px;

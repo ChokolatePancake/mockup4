@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+body {
+  padding-top: 103px;
+  background-color: $light-grey;
+}
+
+.top-block {
+  display: flex;
+  @include  breakpoint(tablet) {
+    flex-direction: column;
+  }
+}
+
 .container {
   margin: 0 auto;
   max-width: 1220px;
@@ -9,6 +21,10 @@
 
   @include breakpoint(desktop) {
     max-width: 1000px;
+  }
+
+   @include breakpoint(laptop) {
+    max-width: 766px;
   }
 
   @include breakpoint(tablet) {
