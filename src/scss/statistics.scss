@@ -1,0 +1,80 @@
+.statistics {
+  background-color: $light-blue;
+  h3 {
+    color:$white;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top: 15px;
+  }
+  p {
+    color:$white;
+  }
+  >.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__block {
+    img {
+      width: 70px;
+    }
+    text-align: center;
+    padding: 80px 0 75px;
+    max-width: 295px;
+    width: 100%;
+  }
+
+  @include breakpoint(desktop) {
+    &__block {
+      max-width: 240px;
+    }
+  }
+
+  @include breakpoint(laptop) {
+    &__block {
+      max-width: 180px;
+      h3 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    &__block {
+      img {
+        width: 80px;
+      }
+      max-width: 240px;
+      p {
+        font-size: 16px;
+      }
+      h3 {
+        font-size: 26px;
+      }
+    }
+  }
+
+  @include breakpoint(phablet) {
+    &__block {
+      max-width: 220px;
+      padding: 50px 0 45px;
+    }
+  }
+
+  @include breakpoint(largePhone) {
+    &__block {
+      h3 {
+        font-size: 20px;
+      }
+      max-width: 140px;
+      padding: 35px 0;
+      p {
+        font-size: 11px;
+      }
+    }
+  }
+}
