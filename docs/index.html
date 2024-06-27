@@ -5,71 +5,100 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Link to main CSS file -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Link to Slick Carousel CSS -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Link to Slick Carousel theme CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-    <title>Document</title>
+    <title>Mockup4</title>
 </head>
 <body>
+<!-- Include header HTML file -->
 <header class="header">
     <div class="container">
+        <!-- Logo and burger menu container -->
         <div class="header__logo-burger">
-        <div class="header__logo"><img src="images/logo_Oxit.png" alt="logo"></div>
-        <div class="header__burger">
-            <span class="header__burger-line header__burger-line1"></span>
-            <span class="header__burger-line header__burger-line2"></span>
-            <span class="header__burger-line header__burger-line3"></span>
+            <!-- Logo -->
+            <div class="header__logo"><img src="images/logo_Oxit.png" alt="logo"></div>
+            <!-- Burger menu icon -->
+            <div class="header__burger">
+                <span class="header__burger-line header__burger-line1"></span>
+                <span class="header__burger-line header__burger-line2"></span>
+                <span class="header__burger-line header__burger-line3"></span>
+            </div>
         </div>
-        </div>
+        <!-- Navigation links and CTA button container -->
         <div class="header__links-button">
+            <!-- Navigation menu -->
             <div class="header__links">
                 <ol>
                     <li><a href="#main">Головна</a></li>
                     <li><a href="#program">Програма курсу</a></li>
-                    <li><a href="">Відгуки про курс</a></li>
-                    <li><a href="">Відео</a></li>
-                    <li><a href="">Ментори</a></li>
+                    <li><a href="#testimonials">Відгуки про курс</a></li>
+                    <li><a href="#video">Відео</a></li>
+                    <li><a href="#mentors">Ментори</a></li>
                 </ol>
             </div>
+            <!-- CTA button -->
             <div class="header__button"><button>Подати заявку</button></div>
         </div>
     </div>
 </header>
+<!-- Main content container for content left block and registration block-->
 <div id="main" class="container ">
     <div class="top-block">
         <div class="content-left">
+        <!-- Main heading -->
         <h2>Курси програмування у Луцьку</h2>
+
+        <!-- Paragraph describing the IT courses -->
         <p>Сфера ІТ розвивається максимально швидко. Зараз дуже популярно здобувати освіту, що повязана з ІТ. Існує лише одна проблема - брак дійсно кваліфікованих спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало практики і "живих", реальних кейсів. ІТ школа ОхІТ створила таку методику навчання, при якій за короткий час ви отримаєте необхідні знання, щоб стати ІТ спеціалістом. Чекаємо вас на наших курсах з програмування в Луцьку. Старт наступного курсу 3 серпня.</p>
 </div>
         <div class="registration">
+  <!-- Form title -->
   <h3>Зареєструватися на курси</h3>
+
+  <!-- Registration form -->
   <form class="registration__form">
+    <!-- Name input field -->
     <div class="registration__step">
       <label for="name">Ім'я</label>
       <input type="text" id="name" placeholder="Ім'я" required>
     </div>
+
+    <!-- Surname input field -->
     <div class="registration__step">
       <label for="surname">Прізвище</label>
       <input type="text" id="surname" placeholder="Прізвище" required>
     </div>
+
+    <!-- Interests input field -->
     <div class="registration__step">
       <label for="interests">Мене більше цікавить</label>
       <input type="text" id="interests"  placeholder="developer or QA" required>
     </div>
+
+    <!-- Phone number input field with pattern -->
     <div class="registration__step">
       <label for="phone">Номер телефону</label>
       <input type="tel" id="phone" placeholder="Номер телефону: +(380)-xxx-xx-xx" pattern="+(380)-[0-9]{3}-[0-9]{2}-[0-9]{2}" required>
     </div>
+
+    <!-- Email input field -->
     <div class="registration__step">
       <label for="email">Email</label>
       <input type="email" id="email"  placeholder="Email" required>
     </div>
+
+    <!-- Privacy policy checkbox -->
     <div class="registration__checkbox">
       <input type="checkbox" id="privacy-policy" required>
       <label for="privacy-policy">
         Я погоджуюсь з <a href="">Політикою Конфіденційності</a></label>
     </div>
 
+    <!-- Submit button -->
     <div class="registration__button">
       <button type="submit">Зареєструватися зараз</button>
     </div>
@@ -77,17 +106,29 @@
 </div>
     </div>
 </div>
+<!-- Include all blocks -->
+<!-- Main container for the development/program section -->
 <div id="program" class="development">
+    <!-- Container for centering and constraining width -->
     <div class="container">
+        <!-- Main heading for the entire section -->
         <h2>Курс «Розробка сайтів»</h2>
+
+        <!-- Wrapper for all course blocks -->
         <div class="development__content">
+            <!-- Individual course block: WordPress -->
             <div class="development__block">
+                <!-- Course icon container -->
                 <div class="development__image">
                     <img src="images/icons/course-icon-1.png" alt="course-1">
                 </div>
+                <!-- Course title -->
                 <h4>Розробка сайтів на WordPress</h4>
+                <!-- Course description -->
                 <p class="development__text">Курс складається з коротких навчальних відео, на яких ти пізнаєш основи WordPress, навчишся створювати сайти різної складності: від блогів до інтернет магазинів. Всі знання закріпиш за допомогою тестових завдань.</p>
             </div>
+
+            <!-- Individual course block: Drupal 8 -->
             <div class="development__block">
                 <div class="development__image">
                     <img src="images/icons/course-icon-2.png" alt="course-2">
@@ -95,6 +136,8 @@
                 <h4>Розробка сайтів на Drupal 8</h4>
                 <p class="development__text">Для створення чудових сайтів на Drupal 8, цеглинка за цеглинкою, ти пізнаєш секрети основних та додаткових Drupal-модулів(Views, Rules, Panels, Devel, Paragraph та багатьох інших).</p>
             </div>
+
+            <!-- Individual course block: Testing introduction -->
             <div class="development__block">
                 <div class="development__image">
                     <img src="images/icons/course-icon-3.png" alt="course-3">
@@ -105,36 +148,220 @@
         </div>
     </div>
 </div>
+<!-- Statistics section -->
 <div class="statistics">
     <div class="container">
-    <div class="statistics__block">
-        <img src="images/icons/statistic-icon-1.png" alt="statistics 1">
-        <h3>25</h3>
-        <p>курсів організовано</p>
-    </div>
-    <div class="statistics__block">
-        <img src="images/icons/statistic-icon-2.png" alt="statistics 2">
-        <h3>836</h3>
-        <p>годин занять проведено</p>
-    </div>
-    <div class="statistics__block">
-        <img src="images/icons/statistic-icon-3.png" alt="statistics 3">
-        <h3>500</h3>
-        <p>студентів навчено</p>
-    </div>
-    <div class="statistics__block">
-        <img src="images/icons/statistic-icon-4.png" alt="statistics 4">
-        <h3>120</h3>
-        <p>випускників курсів працевлаштовано</p>
-    </div>
+        <!-- Courses organized statistic -->
+        <div class="statistics__block">
+            <img src="images/icons/statistic-icon-1.png" alt="statistics 1">
+            <h3>25</h3>
+            <p>курсів організовано</p>
+        </div>
+        <!-- Hours of classes conducted statistic -->
+        <div class="statistics__block">
+            <img src="images/icons/statistic-icon-2.png" alt="statistics 2">
+            <h3>836</h3>
+            <p>годин занять проведено</p>
+        </div>
+        <!-- Students taught statistic -->
+        <div class="statistics__block">
+            <img src="images/icons/statistic-icon-3.png" alt="statistics 3">
+            <h3>500</h3>
+            <p>студентів навчено</p>
+        </div>
+        <!-- Graduates employed statistic -->
+        <div class="statistics__block">
+            <img src="images/icons/statistic-icon-4.png" alt="statistics 4">
+            <h3>120</h3>
+            <p>випускників курсів працевлаштовано</p>
+        </div>
     </div>
 </div>
+<!-- Testimonials section -->
+<div id="testimonials" class="testimonials">
+    <div class="container">
+        <!-- Section title -->
+        <h2>Що кажуть студенти наших курсів</h2>
+        <!-- Container for all testimonial blocks -->
+        <div class="testimonials__content">
+            <!-- First testimonial block -->
+            <div class="testimonials__block">
+                <!-- Testimonial message -->
+                <div class="testimonials__message">
+                    <p>Під час проходження курсів Drupal у школі OxIT я навчився створювати не досить складні сайти та знайшов справу, якою хочу займатись. Після успішного завершення курсів мені надали можливість продовжити навчання вже в якості Intern Site Builder. Зараз я можу сказати, що Drupal та OxIT повністю змінили моє життя.</p>
+                </div>
+                <!-- Testimonial author name -->
+                <h5>Коля</h5>
+                <!-- Testimonial author role -->
+                <p class="testimonials__role">Drupal-девелопер</p>
+            </div>
+
+            <!-- Second testimonial block -->
+            <div class="testimonials__block">
+                <div class="testimonials__message">
+                    <p>Відвідуючи курси Drupal у OxIT, я здобув навички створення базових веб-сайтів та знайшов своє професійне покликання. Успішно завершивши навчання, я отримав можливість продовжити свій розвиток на позиції Intern Site Builder. Зараз я можу впевнено сказати, що Drupal та OxIT змінили мою професійну траєкторію.</p>
+                </div>
+                <h5>Артем</h5>
+                <p class="testimonials__role">Drupal-девелопер</p>
+            </div>
+
+            <!-- Third testimonial block -->
+            <div class="testimonials__block">
+                <div class="testimonials__message">
+                    <p>Курси Drupal у школі OxIT дали мені можливість освоїти основи веб-розробки та відкрити для себе цікаву сферу діяльності. Після закінчення програми мені запропонували продовжити навчання як Intern Site Builder. Тепер я з впевненістю можу стверджувати, що Drupal та OxIT стали поворотним моментом у моєму житті.</p>
+                </div>
+                <h5>Степан</h5>
+                <p class="testimonials__role">Drupal-девелопер</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Video section -->
+<div id="video" class="video">
+    <div class="container">
+        <!-- Section title -->
+        <h2 class="video__title">Відео</h2>
+        <!-- Introductory text -->
+        <div class="video__text">
+            <p>Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з ХVІ сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів. "Риба" не тільки успішно пережила п'ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Вона популяризувалась в 60-их роках минулого сторіччя завдяки виданню зразків шрифтів Letraset, які містили уривки з Lorem Ipsum, і вдруге нещодавно завдяки програмам комп'ютерного верстування на кшталт Aldus Pagemaker, які використовували різні версії Lorem Ipsum.</p>
+        </div>
+    </div>
+    <!-- YouTube video embed -->
+    <div class="video__player">
+        <iframe
+                src="https://www.youtube.com/embed/XvpxCKR50Bc?si=18RXS4a5ZpKkTj44"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+        </iframe>
+    </div>
+</div>
+<!-- Mentors section -->
+<div id="mentors" class="mentors">
+    <div class="container">
+        <!-- Section heading -->
+        <h2>Наші ментори</h2>
+
+        <!-- Container for all mentor blocks -->
+        <div class="mentors__content">
+            <!-- Mentor block: Viktor -->
+            <div class="mentors__block">
+                <!-- Mentor image -->
+                <div class="mentors__image"><img src="images/viktor.png" alt="Viktor"></div>
+                <!-- Mentor description -->
+                <div class="mentors__description">
+                    <h3>Віктор</h3>
+                    <div class="mentors__text">
+                        <!-- Mentor bio paragraphs -->
+                        <p>Майбутнім управлінцям неабияк пощастило - адже з ними ділитиметься досвідом управлінець із величезним досвідом! Сам засновник і СЕО компанії Internet Devels, Віктор Левандовський, висловив бажання бути викладачем на курсах проект-менеджменту.</p>
+                        <p>Віктору є про що розповісти. Він знає все про створення та керування великими компаніями, ефективну комунікацію, успішні проекти і багато іншого. При цьому він ніколи не скаже, що знає все - саморозвиток для нього не закінчується жодної хвилини.</p>
+                        <p>На книжкових Віктора полицях сотні прочитаних книг про управління не тільки А от заповітні мрії не стоять на полиці, бо Віктор вміє впевнено йти до їхнього здійснення. Тільки недавно він передавав усім привіт з Ельбрусу - найвищої точки Європи.</p>
+                        <p>Буде нестримна, мов гірська лавина, енергія, помножена на мудрість і досвід. І ви таке пропустите? Записуйтесь уже зараз!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mentor block: Mark (same as Viktor's block) -->
+            <div class="mentors__block">
+                <div class="mentors__image"><img src="images/mark.png" alt="Mark"></div>
+                <div class="mentors__description">
+                    <h3>Марк</h3>
+                    <div class="mentors__text">
+                        <p>Майбутнім управлінцям неабияк пощастило - адже з ними ділитиметься досвідом управлінець із величезним досвідом! Сам засновник і СЕО компанії Internet Devels, Віктор Левандовський, висловив бажання бути викладачем на курсах проект-менеджменту.</p>
+                        <p> Віктору є про що розповісти. Він знає все про створення та керування великими компаніями, ефективну комунікацію, успішні проекти і багато іншого. При цьому він ніколи не скаже, що знає все - саморозвиток для нього не закінчується жодної хвилини.</p>
+
+                        <p>На книжкових Віктора полицях сотні прочитаних книг про управління не тільки А от заповітні мрії не стоять на полиці, бо Віктор вміє впевнено йти до їхнього здійснення. Тільки недавно він передавав усім привіт з Ельбрусу - найвищої точки Європи.</p>
+
+                        <p>Буде нестримна, мов гірська лавина, енергія, помножена на мудрість і досвід. І ви таке пропустите? Записуйтесь уже зараз!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mentor block: Vova (same as Viktor's block) -->
+            <div class="mentors__block">
+                <div class="mentors__image"><img src="images/vova.png" alt="Vova"></div>
+                <div class="mentors__description">
+                    <h3>Вова</h3>
+                    <div class="mentors__text">
+                        <p>Майбутнім управлінцям неабияк пощастило - адже з ними ділитиметься досвідом управлінець із величезним досвідом! Сам засновник і СЕО компанії Internet Devels, Віктор Левандовський, висловив бажання бути викладачем на курсах проект-менеджменту.</p>
+                        <p> Віктору є про що розповісти. Він знає все про створення та керування великими компаніями, ефективну комунікацію, успішні проекти і багато іншого. При цьому він ніколи не скаже, що знає все - саморозвиток для нього не закінчується жодної хвилини.</p>
+
+                        <p>На книжкових Віктора полицях сотні прочитаних книг про управління не тільки А от заповітні мрії не стоять на полиці, бо Віктор вміє впевнено йти до їхнього здійснення. Тільки недавно він передавав усім привіт з Ельбрусу - найвищої точки Європи.</p>
+
+                        <p>Буде нестримна, мов гірська лавина, енергія, помножена на мудрість і досвід. І ви таке пропустите? Записуйтесь уже зараз!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Container for the Google Maps embed -->
+<div class="map">
+    <!-- Google Maps iframe embed -->
+    <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2526.297759188711!2d25.31523317722983!3d50.71441487164389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4725997e35f529e9%3A0xeba249b67a64b0a9!2sInternetDevels!5e0!3m2!1sen!2sua!4v1719405414316!5m2!1sen!2sua"
+            width="100%"
+            height="400"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+<!-- Call-to-Action (CTA) section -->
+<div class="cta">
+    <div class="container">
+        <!-- Phone contact block -->
+        <div class="cta__block">
+            <img src="images/icons/phone.svg" alt="phone">
+            <h4>Телефон</h4>
+            <a href="tel:+380673321755">+38 067 332 17 55</a>
+        </div>
+        <!-- Email contact block -->
+        <div class="cta__block">
+            <img src="images/icons/mail.svg" alt="mail">
+            <h4>E-mail</h4>
+            <a href="mailto:office@it.volyn.ua">office@it.volyn.ua</a>
+        </div>
+        <!-- Address block -->
+        <div class="cta__block">
+            <img src="images/icons/location.svg" alt="location">
+            <h4>Адреса</h4>
+            <a href="https://maps.app.goo.gl/BXfzpuZRkdc2fB1B8">вул. Боженка 34г, Луцьк</a>
+        </div>
+        <!-- Facebook block -->
+        <div class="cta__block">
+            <img src="images/icons/facebook.svg" alt="facebook">
+            <h4>Facebook</h4>
+            <a href="https://www.facebook.com/oxitschool/">facebook.com/oxitschool</a>
+        </div>
+    </div>
+</div>
+<!-- Copyright section -->
+<div class="copyright">
+    <!-- Copyright notice -->
+    <p>©Copyright 2018-2020 Internet Devels</p>
+    <!-- Privacy policy link -->
+    <a href="">Умови політики конфіденційності</a>
+</div>
+<!-- Include jQuery library -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<!-- Include jQuery migrate plugin -->
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!-- Include Slick Carousel JavaScript -->
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- Include JavaScript file for burger menu -->
 <script src="js/burger.js"></script>
+<!-- Include JavaScript file for phone validation -->
 <script src="js/phone.js"></script>
+<!-- Include JavaScript file for full form validation-->
 <script src="js/form-validation.js"></script>
+<!-- Include JavaScript files for sliders -->
 <script src="js/slider.js"></script>
+<script src="js/testimonials-slider.js"></script>
+<script src="js/mentors-slider.js"></script>
 </body>
 </html>

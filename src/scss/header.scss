@@ -1,164 +1,164 @@
 .header {
-  position: fixed;
-  z-index: 100;
-  background-color: $white;
-  top: 0;
-  box-shadow: 0 0 10px 5px $grey;
-  width: 100%;
-  padding: 10px 0;
+  position: fixed; // Fix the header at the top
+  z-index: 100; // Ensure header stays on top
+  background-color: $white; // Set background color to white
+  top: 0; // Position header at the top
+  box-shadow: 0 0 10px 5px $grey; // Add shadow for depth
+  width: 100%; // Full width
+  padding: 10px 0; // Vertical padding
   >.container {
-    display: flex;
+    display: flex; // Flex container for alignment
   }
   &__logo-burger {
-    display: flex;
+    display: flex; // Flex container for logo and burger
   }
   &__logo {
     img {
-      max-width: 80px;
-      height: auto;
+      max-width: 80px; // Maximum width of the logo
+      height: auto; // Auto height to maintain aspect ratio
     }
   }
 
   &__burger {
-    display: none;
-    cursor: pointer;
+    display: none; // Hide burger by default
+    cursor: pointer; // Pointer cursor on hover
   }
 
   &__links-button {
-    display: flex;
-    margin: auto 0 auto auto;
-    width: 710px;
-    justify-content: space-between;
+    display: flex; // Flex container for links and button
+    margin: auto 0 auto auto; // Center vertically, align right
+    width: 710px; // Set width
+    justify-content: space-between; // Space between elements
   }
 
   &__links {
-    align-content: center;
+    align-content: center; // Center align content
     ol {
-      display: flex;
-      width: 550px;
-      justify-content: space-between;
+      display: flex; // Flex container for list
+      width: 550px; // Set width
+      justify-content: space-between; // Space between list items
     }
     a {
-      text-decoration: none;
+      text-decoration: none; // Remove underline from links
       &:hover {
-        color: $black;
+        color: $light-blue; // Change color on hover
       }
     }
   }
 
   &__button {
     button {
-      border:none;
-      background-color: $blue;
-      color: $white;
-      padding: 14px;
-      border-radius: 40px;
+      border: none; // Remove border
+      background-color: $blue; // Set background color
+      color: $white; // Set text color
+      padding: 15px; // Set padding
+      border-radius: 40px; // Round corners
     }
   }
 
   @include breakpoint(desktop) {
     &__links-button {
-      max-width: 680px;
+      max-width: 680px; // Adjust width for desktop
     }
     &__links {
       ol {
-        max-width: 500px;
+        max-width: 500px; // Adjust width for desktop
       }
     }
   }
 
   @include breakpoint(laptop) {
     &__links-button {
-      max-width: 640px;
+      max-width: 640px; // Adjust width for laptop
     }
     &__links {
       ol {
-        max-width: 480px;
+        max-width: 480px; // Adjust width for laptop
       }
     }
   }
 
   @include breakpoint(tablet) {
     >.container {
-      display: block;
+      display: block; // Block display for container on tablet
     }
     &__logo-burger {
-      width: 100%;
+      width: 100%; // Full width for logo and burger
     }
     &__burger {
-      display: block;
-      margin: auto 0 auto auto;
-      background-color: $blue;
-      padding: 5px;
-      border-radius: 5px;
-      max-height: 38px;
-      max-width: 48px;
+      display: block; // Show burger on tablet
+      margin: auto 0 auto auto; // Align right
+      background-color: $blue; // Set background color
+      padding: 5px; // Set padding
+      border-radius: 5px; // Round corners
+      max-height: 38px; // Set maximum height
+      max-width: 48px; // Set maximum width
       &-line {
-        transition: transform 0.75s ease, opacity 0.75 ease;
-        display: block;
-        width: 38px;
-        height: 2px;
-        background-color: $white;
-        margin: 6px 0;
+        transition: transform 0.75s ease, opacity 0.75s ease; // Smooth transitions
+        display: block; // Block display
+        width: 38px; // Set width
+        height: 2px; // Set height
+        background-color: $white; // Set background color
+        margin: 6px 0; // Set margin
       }
       &.open {
-          .header__burger-line1 {
-            transform: translate(-12px) rotate(33.5deg) translate(15px);
-          }
+        .header__burger-line1 {
+          transform: translate(-12px) rotate(33.5deg) translate(15px); // Transform line 1 when open
+        }
         .header__burger-line2 {
-            opacity: 0;
-          }
+          opacity: 0; // Hide line 2 when open
+        }
         .header__burger-line3 {
-            transform: translate(-12px) rotate(-33.5deg) translate(15px);
-          }
+          transform: translate(-12px) rotate(-33.5deg) translate(15px); // Transform line 3 when open
         }
       }
+    }
     &__links-button {
-      max-width: 550px;
-      display: none;
+      max-width: 550px; // Adjust width for tablet
+      display: none; // Hide by default
       &.show {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
+        display: flex; // Show and use flex layout
+        flex-direction: column; // Column layout
+        text-align: center; // Center align text
         ol {
-          flex-direction: column;
-          text-align: center;
-          max-width: 560px;
+          flex-direction: column; // Column layout for list
+          text-align: center; // Center align text
+          max-width: 560px; // Set maximum width
           li {
-            margin-top: 16px;
-            margin-bottom: 10px;
+            margin-top: 16px; // Set top margin
+            margin-bottom: 10px; // Set bottom margin
           }
         }
         button {
-          margin: 10px auto;
+          margin: 10px auto; // Center button
         }
       }
     }
   }
   @include breakpoint(phablet) {
     &__links-button {
-      max-width: 440px;
+      max-width: 440px; // Adjust width for phablet
     }
     &__links {
       ol {
-        width: 440px;
+        width: 440px; // Set width for list
       }
     }
   }
 
   @include breakpoint(largePhone) {
     &__links-button {
-      max-width: 280px;
+      max-width: 280px; // Adjust width for large phone
     }
     &__links {
-      max-width: 280px;
+      max-width: 280px; // Adjust width for links
     }
     &__button {
-      max-width: 280px;
+      max-width: 280px; // Adjust width for button
     }
     &__links {
       ol {
-        width: 280px;
+        width: 280px; // Set width for list
       }
     }
   }

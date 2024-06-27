@@ -1,166 +1,161 @@
 .registration {
-  display: flex;
-  justify-content: center;
-  height: 670px;
-  width: 600px;
-  flex-direction: column;
-  margin-left: auto;
-  margin-right: 0;
+  display: flex; // Use flexbox layout
+  justify-content: center; // Center content horizontally
+  height: 670px; // Set height
+  width: 600px; // Set width
+  flex-direction: column; // Arrange items in a column
+  margin-left: auto; // Center content horizontally
+  margin-right: 0; // No right margin
   h3 {
-    color: $dark-grey;
-    font-weight: 500;
-    margin-bottom: 4px;
-    font-size: 20px;
-    margin-top: 0;
+    color: $dark-grey; // Set text color
+    font-weight: 500; // Set font weight
+    margin-bottom: 4px; // Set bottom margin
+    font-size: 20px; // Set font size
+    margin-top: 0; // No top margin
   }
   &__step {
-    display: flex;
-    flex-direction: column;
+    display: flex; // Use flexbox layout
+    flex-direction: column; // Arrange items in a column
     label {
-      color: $dark-grey;
-      font-size: 14px;
-      line-height: 30px;
-      margin-top: 5px;
-      margin-bottom: 5px;
+      color: $dark-grey; // Set text color
+      font-size: 14px; // Set font size
+      line-height: 30px; // Set line height
+      margin-top: 5px; // Set top margin
+      margin-bottom: 5px; // Set bottom margin
     }
     label::after {
-      content: '*';
-      color: $red;
+      content: '*'; // Add asterisk after label
+      color: $red; // Set color to red
     }
     input {
-      font-size: 14px;
-      padding: 10px;
-      border-radius: 5px;
-      border: 2px solid $grey;
+      font-size: 14px; // Set font size
+      padding: 10px; // Set padding
+      border-radius: 5px; // Set border radius
+      border: 2px solid $grey; // Set border style
       &.highlight-error {
-        border-color: $red;
-        border-width: 2px;
+        border-color: $red; // Highlight border in red on error
+        border-width: 2px; // Set border width
       }
     }
-
   }
 
   &__button {
-    text-align: center;
+    text-align: center; // Center align text
     button {
-      border: none;
-      text-transform: uppercase;
-      background-color: $blue;
-      color: $white;
-      border-radius: 50px;
-      padding: 16px 90px;
+      border: none; // Remove border
+      text-transform: uppercase; // Uppercase text
+      background-color: $blue; // Set background color
+      color: $white; // Set text color
+      border-radius: 50px; // Round corners
+      padding: 16px 90px; // Set padding
     }
   }
 
   &__checkbox {
-    margin-top: 20px;
-    margin-bottom: 36px;
-    position: relative;
+    margin-top: 20px; // Set top margin
+    margin-bottom: 36px; // Set bottom margin
+    position: relative; // Set relative positioning
     label {
-      font-size: 12px;
+      font-size: 12px; // Set font size
       a {
-        text-decoration: none;
-        color: $blue;
+        text-decoration: none; // Remove underline from links
+        color: $blue; // Set link color
       }
     }
     label::after {
-      content: '*';
-      color: $red;
+      content: '*'; // Add asterisk after label
+      color: $red; // Set color to red
     }
-
     input[type="checkbox"] {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-
+      position: absolute; // Position absolutely
+      opacity: 0; // Hide checkbox
+      cursor: pointer; // Pointer cursor on hover
       & + label {
-        position: relative;
-        padding-left: 20px;
-        cursor: pointer;
-        user-select: none;
+        position: relative; // Set relative positioning
+        padding-left: 20px; // Add left padding
+        cursor: pointer; // Pointer cursor on hover
+        user-select: none; // Prevent text selection
       }
-
       & + label::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 12px;
-        height: 12px;
-        border: 2px solid $grey;
-        border-radius: 5px;
-        background-color: $white;
-        transition: all 0.3s;
+        content: ''; // Empty content for custom checkbox
+        position: absolute; // Position absolutely
+        left: 0; // Align to left
+        top: 50%; // Align to top
+        transform: translateY(-50%); // Center vertically
+        width: 12px; // Set width
+        height: 12px; // Set height
+        border: 2px solid $grey; // Set border style
+        border-radius: 5px; // Round corners
+        background-color: $white; // Set background color
+        transition: all 0.3s; // Smooth transition
       }
-
       &:hover + label::before {
-        background-color: $middle-grey;
-        transition: all 0.3s;
+        background-color: $middle-grey; // Change background on hover
+        transition: all 0.3s; // Smooth transition
       }
-
       &:checked + label::before {
-        background-color: $blue;
-        border-color: $blue;
+        background-color: $blue; // Change background when checked
+        border-color: $blue; // Change border color when checked
       }
-
       &:checked + label::after {
-        content: '';
-        position: absolute;
-        left: 5px;
-        top: 50%;
-        transform: translateY(-60%) rotate(45deg);
-        width: 4px;
-        height: 8px;
-        border: solid white;
-        border-width: 0 2px 2px 0;
+        content: ''; // Add checkmark after label
+        position: absolute; // Position absolutely
+        left: 5px; // Align checkmark to left
+        top: 50%; // Align checkmark to top
+        transform: translateY(-60%) rotate(45deg); // Rotate checkmark
+        width: 4px; // Set width
+        height: 8px; // Set height
+        border: solid white; // Set border style
+        border-width: 0 2px 2px 0; // Set border widths
       }
-
       &.highlight-error + label::before {
-        border-color: red;
+        border-color: red; // Highlight border in red on error
       }
     }
   }
 
   @include breakpoint(desktop) {
-    width: 450px;
+    width: 450px; // Set width for desktop
   }
 
   @include breakpoint(laptop) {
-    width: 320px;
+    width: 320px; // Set width for laptop
     &__button {
       button {
-        padding: 16px 59px;
+        padding: 16px 59px; // Adjust padding for button on laptop
       }
     }
   }
 
   @include breakpoint(tablet) {
-    height: 700px;
+    height: 700px; // Set height for tablet
     h3 {
-      text-align: center;
-      font-size: 32px;
+      text-align: center; // Center align text
+      font-size: 32px; // Adjust font size for tablet
     }
     label {
-      font-size: 16px;
-      line-height: 28px;
+      font-size: 16px; // Adjust font size for label
+      line-height: 28px; // Adjust line height for label
     }
     input {
-      font-size: 16px;
+      font-size: 16px; // Adjust font size for input
     }
-    width: 100%;
+    width: 100%; // Set width to 100%
   }
 
   @include breakpoint(largePhone) {
     h3 {
-      font-size: 20px;
+      font-size: 20px; // Adjust font size for large phone
+    }
+    label {
+      margin-top: 8px; // Adjust top margin for label
     }
     label {
       margin-top: 8px;
     }
     &__button {
       button {
-        padding: 16px 39px;
+        padding: 16px 39px; // Adjust padding for button on large phone
       }
     }
   }

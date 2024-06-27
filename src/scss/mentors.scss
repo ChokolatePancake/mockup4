@@ -1,0 +1,68 @@
+.mentors {
+  background-color: $white; // Set background color to white
+  padding: 60px 0; // Add padding to top and bottom
+  h2 {
+    text-align: center; // Center align the heading
+    font-weight: 500; // Set font weight
+  }
+  &__block {
+    display: flex !important; // Use flex display and important
+    h3 {
+      color: $light-blue; // Set heading color
+      margin-top: 30px; // Add top margin
+      margin-bottom: 34px; // Add bottom margin
+    }
+    margin-bottom: 12px; // Add bottom margin to block
+  }
+  &__image {
+    margin-right: 100px; // Add right margin
+  }
+  &__text {
+    line-height: 24px; // Set line height
+    font-weight: 300; // Set font weight
+    max-width: 680px; // Set maximum width
+  }
+
+  @include breakpoint(laptop) {
+    &__block {
+      flex-direction: column; // Use column layout for laptop
+      h3 {
+        font-size: 24px; // Set font size
+      }
+    }
+    &__text {
+      max-width: 736px; // Set maximum width
+    }
+  }
+
+  @include breakpoint(tablet) {
+    &__block {
+      text-align: center; // Center align text
+      h3 {
+        margin-bottom: 24px; // Add bottom margin
+      }
+    }
+    &__image {
+      margin: 0 auto; // Center image
+    }
+  }
+
+  @include breakpoint(largePhone) {
+    &__image {
+      img {
+        width: 150px; // Set image width
+      }
+    }
+    h3 {
+      font-size: 20px; // Set font size
+    }
+    &__text {
+      font-size: 14px; // Set font size
+      p {
+        &:last-child {
+          letter-spacing: -0.2px; // Adjust letter spacing for the last paragraph
+        }
+      }
+    }
+  }
+}

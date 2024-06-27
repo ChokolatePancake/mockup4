@@ -1,0 +1,11 @@
+.copyright {
+  padding: 20px 0 30px; // Add vertical padding
+  text-align: center; // Center-align text
+  a {
+    text-decoration: none; // Remove underline from links
+    color: $light-black; // Set link color
+  }
+  p {
+    color: $light-blue; // Set paragraph color
+  }
+}

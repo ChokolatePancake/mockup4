@@ -1,0 +1,109 @@
+.testimonials {
+  background-color: $white; // Set background color to white
+  text-align: center; // Center align text
+  padding-top: 70px; // Add top padding
+  height: 450px; // Set height
+  >.container {
+    max-width: 700px; // Set maximum width
+  }
+  h2 {
+    margin: 0; // Remove margin
+    font-weight: 500; // Set font weight
+  }
+
+  &__content {
+    margin: 0 -250px; // Set horizontal margin
+    padding-bottom: 80px; // Add bottom padding
+  }
+  &__block {
+    max-width: 700px; // Set maximum width
+    margin: 0 250px; // Set horizontal margin
+    padding: 14px 0; // Add vertical padding
+  }
+  &__message {
+    p {
+      color: $dark-white; // Set text color
+      font-size: 16px; // Set font size
+      line-height: 26px; // Set line height
+    }
+    &::before {
+      content: '“'; // Add opening quote
+      font-size: 4em; // Set font size
+      color: $grey; // Set color
+      position: absolute; // Position absolutely
+      font-family: "Oswald", sans-serif; // Set font family
+      font-weight: bold; // Set font weight
+      top: 0; // Align to top
+      left: -30px; // Align to left
+    }
+    &::after {
+      content: '”'; // Add closing quote
+      font-size: 4em; // Set font size
+      color: $grey; // Set color
+      position: absolute; // Position absolutely
+      font-family: "Oswald", sans-serif; // Set font family
+      font-weight: bold; // Set font weight
+      bottom: 50px; // Align to bottom
+      right: -20px; // Align to right
+    }
+  }
+  h5 {
+    font-weight: 600; // Set font weight
+    font-size: 16px; // Set font size
+    margin-bottom: 5px; // Add bottom margin
+  }
+  &__role {
+    margin-top: 5px; // Add top margin
+    font-style: italic; // Set italic style
+  }
+
+  @include breakpoint(desktop) {
+    height: 420px; // Set height for desktop
+    &__content {
+      padding-bottom: 50px; // Adjust bottom padding for desktop
+    }
+  }
+
+  @include breakpoint(tablet) {
+    height: 480px; // Set height for tablet
+    >.container {
+      max-width: 560px; // Adjust maximum width for tablet
+    }
+    &__content {
+      margin: 0 -200px; // Adjust horizontal margin for tablet
+    }
+    &__block {
+      margin: 0 200px; // Adjust horizontal margin for tablet
+      max-width: 560px; // Adjust maximum width for tablet
+    }
+  }
+
+  @include breakpoint(phablet) {
+    height: 560px; // Set height for phablet
+    >.container {
+      max-width: 430px; // Adjust maximum width for phablet
+    }
+    &__content {
+      margin: 0 -190px; // Adjust horizontal margin for phablet
+    }
+    &__block {
+      margin: 0 200px; // Adjust horizontal margin for phablet
+      max-width: 430px; // Adjust maximum width for phablet
+    }
+  }
+
+  @include breakpoint(largePhone) {
+    height: 630px; // Set height for large phone
+    >.container {
+      max-width: 280px; // Adjust maximum width for large phone
+    }
+    &__block {
+      max-width: 280px; // Adjust maximum width for large phone
+    }
+    &__message {
+      p {
+        font-size: 14px; // Adjust font size for large phone
+      }
+    }
+  }
+}
