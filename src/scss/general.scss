@@ -23,7 +23,7 @@ body {
     max-width: 1000px;
   }
 
-   @include breakpoint(laptop) {
+  @include breakpoint(laptop) {
     max-width: 766px;
   }
 

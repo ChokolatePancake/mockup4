@@ -1,0 +1,167 @@
+.registration {
+  display: flex;
+  justify-content: center;
+  height: 670px;
+  width: 600px;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: 0;
+  h3 {
+    color: $dark-grey;
+    font-weight: 500;
+    margin-bottom: 4px;
+    font-size: 20px;
+    margin-top: 0;
+  }
+  &__step {
+    display: flex;
+    flex-direction: column;
+    label {
+      color: $dark-grey;
+      font-size: 14px;
+      line-height: 30px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    label::after {
+      content: '*';
+      color: $red;
+    }
+    input {
+      font-size: 14px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 2px solid $grey;
+      &.highlight-error {
+        border-color: $red;
+        border-width: 2px;
+      }
+    }
+
+  }
+
+  &__button {
+    text-align: center;
+    button {
+      border: none;
+      text-transform: uppercase;
+      background-color: $blue;
+      color: $white;
+      border-radius: 50px;
+      padding: 16px 90px;
+    }
+  }
+
+  &__checkbox {
+    margin-top: 20px;
+    margin-bottom: 36px;
+    position: relative;
+    label {
+      font-size: 12px;
+      a {
+        text-decoration: none;
+        color: $blue;
+      }
+    }
+    label::after {
+      content: '*';
+      color: $red;
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+
+      & + label {
+        position: relative;
+        padding-left: 20px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      & + label::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        border: 2px solid $grey;
+        border-radius: 5px;
+        background-color: $white;
+        transition: all 0.3s;
+      }
+
+      &:hover + label::before {
+        background-color: $middle-grey;
+        transition: all 0.3s;
+      }
+
+      &:checked + label::before {
+        background-color: $blue;
+        border-color: $blue;
+      }
+
+      &:checked + label::after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-60%) rotate(45deg);
+        width: 4px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+      }
+
+      &.highlight-error + label::before {
+        border-color: red;
+      }
+    }
+  }
+
+  @include breakpoint(desktop) {
+    width: 450px;
+  }
+
+  @include breakpoint(laptop) {
+    width: 320px;
+    &__button {
+      button {
+        padding: 16px 59px;
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    height: 700px;
+    h3 {
+      text-align: center;
+      font-size: 32px;
+    }
+    label {
+      font-size: 16px;
+      line-height: 28px;
+    }
+    input {
+      font-size: 16px;
+    }
+    width: 100%;
+  }
+
+  @include breakpoint(largePhone) {
+    h3 {
+      font-size: 20px;
+    }
+    label {
+      margin-top: 8px;
+    }
+    &__button {
+      button {
+        padding: 16px 39px;
+      }
+    }
+  }
+}

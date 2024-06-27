@@ -1,13 +1,13 @@
 .content-left {
-  height: 640px;
+  height: 720px;
   align-content: center;
   text-align: center;
-  width: 50%;
+  width: 47.5%;
   padding: 0 40px;
   h2 {
     color: $dark-grey;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 30px;
   }
 
   p {
@@ -26,6 +26,8 @@
 
   @include breakpoint(laptop) {
     height: 700px;
+    padding-left: 10px;
+    width: 55%;
     h2 {
       font-size: 26px;
     }
